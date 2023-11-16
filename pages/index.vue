@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-w-[80%] lg:min-w-[50%] h-screen bg-gray-100/50 px-8 lg:px-20 gap-6">
+  <div class="flex flex-col min-w-[80%] lg:min-w-[50%] min-h-screen bg-gray-100/50 px-8 lg:px-20 gap-6">
     <h1 class="py-12 text-4xl font-semibold">D-Notes 📝</h1>
     <Form />
     <div v-for="(note, index) in notes" :key="index">
