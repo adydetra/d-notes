@@ -11,6 +11,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
+  "dependencies": {
+    "@pinia/nuxt": "^0.5.1"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.1",
     "@nuxt/devtools": "^1.0.2",
@@ -18,8 +21,5 @@
     "@unocss/nuxt": "^0.58.3",
     "eslint": "^8.56.0",
     "nuxt": "^3.9.0"
-  },
-  "dependencies": {
-    "@pinia/nuxt": "^0.5.1"
   }
 }
