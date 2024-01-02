@@ -1,13 +1,8 @@
 export default defineNuxtConfig({
-  modules: [""],
+  modules: ['@unocss/nuxt', '@pinia/nuxt'],
 
-  devtools: { enabled: true },
-
-  css: ["~/assets/css/main.css"],
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
+  pinia: {
+    storesDirs: ['./stores/**'],
   },
+  devtools: { enabled: false },
 });

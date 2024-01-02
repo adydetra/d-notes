@@ -1,21 +1,25 @@
 {
-  "name": "nuxt-app",
+  "name": "d-notes",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.6.1",
     "@nuxt/devtools": "^1.0.2",
     "@types/node": "^20.9.0",
-    "nuxt": "^3.8.1"
+    "@unocss/nuxt": "^0.58.3",
+    "eslint": "^8.56.0",
+    "nuxt": "^3.9.0"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.5"
+    "@pinia/nuxt": "^0.5.1"
   }
 }
