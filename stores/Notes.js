@@ -4,8 +4,14 @@ export const useNotesStore = defineStore('note', () => {
   ]);
   const noteTitles = computed (() => notes.value.map(() => notes.title));
   function addNote(title, content) {
+    const currentDate = new Date();
+    const format = currentDate.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    });
     notes.value.unshift({
-      date: Date(),
+      date: format,
       title,
       content,
     });
