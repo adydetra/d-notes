@@ -1,8 +1,9 @@
-import { defineConfig, presetUno } from 'unocss';
+import { defineConfig, presetAttributify, presetUno } from 'unocss';
 
 export default defineConfig({
   presets: [
     presetUno(),
+    presetAttributify(),
   ],
   shortcuts: {
     input: 'w-80 rounded border border-gray-500 p-1.5',

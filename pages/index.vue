@@ -3,8 +3,8 @@ const NotesStore = useNotesStore();
 </script>
 
 <template>
-  <main class="max-w-4xl mx-auto text-center">
-    <h1 class="text-4xl">
+  <main mx-auto max-w-4xl text-center>
+    <h1 text-4xl>
       D-Notes
     </h1>
     <Form />
