@@ -16,11 +16,14 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.1",
-    "@nuxt/devtools": "^1.0.2",
-    "@types/node": "^20.9.0",
+    "@nuxt/devtools": "^1.0.6",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
+    "@types/node": "^20.10.6",
     "@unocss/eslint-plugin": "^0.58.3",
     "@unocss/nuxt": "^0.58.3",
     "eslint": "^8.56.0",
-    "nuxt": "^3.9.0"
+    "nuxt": "^3.9.0",
+    "vue": "^3.4.5",
+    "vue-router": "^4.2.5"
   }
 }
