@@ -14,7 +14,8 @@ export default defineConfig({
   ],
   shortcuts: {
     input: 'rounded border-none ring ring-gray-100/70 bg-gray-50/50 p-3',
-    button: 'w-40 rounded border-none bg-yellow-200 p-2.5 cursor-pointer',
+    saveButton: 'w-40 rounded border-none bg-yellow-200 p-2.5 cursor-pointer',
+    deleteButton: 'w-40 rounded border-none bg-red-200 p-1 cursor-pointer',
     sidebar: 'px-12 bg-gray-50/50',
   },
   transformers: [

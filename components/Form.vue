@@ -7,11 +7,11 @@ const content = ref('');
 <template>
   <div mx-auto flex flex-col gap-4>
     <p text-2xl>
-      Task:
+      Write
     </p>
     <input v-model="title" placeholder="Title" input>
     <input v-model="content" placeholder="Content" input>
-    <button button @click="NotesStore.addNote(title, content)">
+    <button saveButton @click="NotesStore.addNote(title, content)">
       Save
     </button>
   </div>

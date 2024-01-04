@@ -8,7 +8,7 @@
 
     <section bg-white sidebar>
       <p text-2xl>
-        Today
+        Task
       </p>
       <slot />
     </section>
