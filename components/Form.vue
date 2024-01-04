@@ -5,11 +5,14 @@ const content = ref('');
 </script>
 
 <template>
-  <div mx-auto max-w-2xl flex flex-col items-center gap-4>
-    <input v-model="title" placeholder="Title..." input>
-    <input v-model="content" placeholder="Content..." input>
+  <div mx-auto flex flex-col gap-4>
+    <p text-2xl>
+      Task:
+    </p>
+    <input v-model="title" placeholder="Title" input>
+    <input v-model="content" placeholder="Content" input>
     <button button @click="NotesStore.addNote(title, content)">
-      Post
+      Save
     </button>
   </div>
 </template>
