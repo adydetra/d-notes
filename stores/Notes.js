@@ -16,5 +16,13 @@ export const useNotesStore = defineStore('note', () => {
       content,
     });
   }
-  return { notes, noteTitles, addNote };
+  function deleteNote(date) {
+    const index = notes.value.findIndex(note => note.date === date);
+
+    if (index !== -1)
+      notes.value.splice(index, 1);
+  }
+  return { notes, noteTitles, addNote, deleteNote };
+}, {
+  persist: true,
 });

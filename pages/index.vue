@@ -4,6 +4,6 @@ const NotesStore = useNotesStore();
 
 <template>
   <NuxtLayout>
-    <Display v-for="(note, index) in NotesStore.notes" :key="index" :date="note.date" :title="note.title" :content="note.content" />
+    <Display v-for="(note, index) in NotesStore.notes" :key="index" :date="note.date" :title="note.title" :content="note.content" :delete="NotesStore.deleteNote" />
   </NuxtLayout>
 </template>
