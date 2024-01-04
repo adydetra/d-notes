@@ -8,12 +8,16 @@ const props = defineProps({
 </script>
 
 <template>
-  <section>
-    <p>{{ props.date }}</p>
-    <p>{{ props.title }}</p>
+  <section mb-6 rounded-xl bg-yellow-50 p-4 text-gray-600>
+    <h3 mt-0>
+      {{ props.title }}
+    </h3>
     <p>{{ props.content }}</p>
-    <button deleteButton @click="props.delete?.(props.date)">
-      Delete
-    </button>
+    <div betweenCenter>
+      <span text-xs>{{ props.date }}</span>
+      <button deleteButton @click="props.delete?.(props.date)">
+        Delete
+      </button>
+    </div>
   </section>
 </template>

@@ -1,9 +1,7 @@
-<script setup lang="ts">
-const NotesStore = useNotesStore();
-</script>
-
 <template>
-  <NuxtLayout>
-    <Display v-for="(note, index) in NotesStore.notes" :key="index" :date="note.date" :title="note.title" :content="note.content" :delete="NotesStore.deleteNote" />
-  </NuxtLayout>
+  <main grid grid-cols-3 mx-auto>
+    <GridMenu />
+    <GridTask />
+    <GridWrite />
+  </main>
 </template>
