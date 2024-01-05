@@ -7,10 +7,7 @@ function toggleMode() {
 </script>
 
 <template>
-  <button
-    cursor-pointer rounded border-none p-2
-    @click="toggleMode"
-  >
+  <button cursor-pointer rounded border-none p-2 transition ease-in-out @click="toggleMode">
     <div i-ph-sun-dim-duotone dark:i-ph-moon-stars-duotone text-2xl />
   </button>
 </template>

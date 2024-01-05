@@ -16,8 +16,8 @@ const content = ref('');
       <input v-model="title" placeholder="Title (max 40 length)" maxlength="40" input>
       <textarea v-model="content" placeholder="Content" h-full resize-none input />
     </div>
-    <button mb-8 w-60 cursor-pointer rounded-lg border-none bg-yellow-200 p-3 transition ease-in-out hover:bg-yellow-300 dark:text-black @click="NotesStore.addNote(title, content)">
-      Post
+    <button mb-8 w-60 flex cursor-pointer items-center justify-center gap-2 rounded-lg border-none bg-yellow-200 p-3 transition ease-in-out hover:bg-yellow-300 dark:text-black @click="NotesStore.addNote(title, content)">
+      Post <div i-lets-icons:send-duotone text-xl />
     </button>
   </div>
 </template>
