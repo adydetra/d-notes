@@ -5,14 +5,13 @@ const content = ref('');
 </script>
 
 <template>
-  <div mx-auto h-screen flex flex-col justify-between>
-    <div flex flex-col gap-4>
+  <div top-0 h-screen flex flex-col justify-between md:sticky>
+    <div h-full flex flex-col gap-6 pb-8>
       <p text-2xl>
         Write
       </p>
-
-      <input v-model="title" placeholder="Title" input>
-      <textarea v-model="content" placeholder="Content" input />
+      <input v-model="title" placeholder="Title (max 40 length)" maxlength="40" input>
+      <textarea v-model="content" placeholder="Content" h-full resize-none input />
     </div>
     <button saveButton @click="NotesStore.addNote(title, content)">
       Save

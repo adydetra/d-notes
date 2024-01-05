@@ -1,7 +1,6 @@
 <template>
-  <main grid grid-cols-3 mx-auto>
-    <GridMenu />
-    <GridTask />
+  <main grid grid-cols-1 md:grid-cols-2>
     <GridWrite />
+    <GridNote />
   </main>
 </template>
