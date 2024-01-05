@@ -1,3 +1,24 @@
+<script setup lang="ts">
+useHead({
+  title: 'D-Notes',
+  meta: [
+    {
+      name: 'msapplication-TileColor',
+      content: '#da532c',
+    },
+    {
+      name: 'theme-color',
+      content: '#ffffff',
+    },
+  ],
+});
+
+useSeoMeta({
+  description: 'Innovative note-taking app developed using Nuxt and the Pinia module. Created by Adityawarman Dewa Putra.',
+  twitterCard: 'summary_large_image',
+});
+</script>
+
 <template>
   <NuxtPage />
 </template>
