@@ -1,5 +1,5 @@
 <template>
-  <NuxtPage min-h-dvh />
+  <NuxtPage />
 </template>
 
 <style lang="postcss">
@@ -12,10 +12,7 @@
 }
 html,
 body {
-  @apply scroll-smooth m-0 p-0;
-}
-html.dark {
-  scrollbar-color: #1b1b1b #050505;
+  @apply min-h-dvh scroll-smooth m-0 p-0;
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -34,5 +31,8 @@ html.dark ::-webkit-scrollbar-thumb:active {
 }
 html.dark ::-webkit-scrollbar {
   background-color: #050505;
+}
+.dark {
+  color-scheme: dark;
 }
 </style>

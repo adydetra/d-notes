@@ -15,7 +15,7 @@ const props = defineProps({
     <p>{{ props.content }}</p>
     <div betweenCenter>
       <span text-xs>{{ props.date }}</span>
-      <button deleteButton @click="props.delete?.(props.date)">
+      <button cursor-pointer rounded-md border-none bg-red-200 px-2 py-1 transition ease-in-out hover:bg-red-300 dark:text-black @click="props.delete?.(props.date)">
         Delete
       </button>
     </div>
