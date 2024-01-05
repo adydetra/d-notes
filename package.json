@@ -16,7 +16,9 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.1",
+    "@iconify/json": "^2.2.165",
     "@nuxt/devtools": "^1.0.6",
+    "@nuxtjs/color-mode": "^3.3.2",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "@types/node": "^20.10.6",
     "@unocss/eslint-plugin": "^0.58.3",
