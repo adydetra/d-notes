@@ -13,8 +13,8 @@ const content = ref('');
       <input v-model="title" placeholder="Title (max 40 length)" maxlength="40" input>
       <textarea v-model="content" placeholder="Content" h-full resize-none input />
     </div>
-    <button saveButton @click="NotesStore.addNote(title, content)">
-      Save
+    <button postButton @click="NotesStore.addNote(title, content)">
+      Post
     </button>
   </div>
 </template>
