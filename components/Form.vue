@@ -10,13 +10,13 @@ function postNote() {
     content.value = '';
     NotesStore.validationError = '';
   }
-  else if (title.value.trim() !== '') {
+  else if (content.value.trim() !== '') {
     NotesStore.validationError = 'Title required!';
     setTimeout(() => {
       NotesStore.validationError = '';
     }, 3000);
   }
-  else if (content.value.trim() !== '') {
+  else if (title.value.trim() !== '') {
     NotesStore.validationError = 'Content required!';
     setTimeout(() => {
       NotesStore.validationError = '';
