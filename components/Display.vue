@@ -14,6 +14,7 @@ function toggleTooltip() {
 
 <template>
   <section mb-6 rounded-xl bg-yellow-50 p-4 text-gray-600>
+    <Toast />
     <h3 mt-0 leading-loose>
       {{ props.title }}
     </h3>

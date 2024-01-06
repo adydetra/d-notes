@@ -2,6 +2,7 @@ export const useNotesStore = defineStore('note', () => {
   const notes = ref([
     { date: '', title: '', content: '' },
   ]);
+  const validationError = ref('');
   const noteTitles = computed (() => notes.value.map(() => notes.title));
   function addNote(title, content) {
     const currentDate = new Date();
@@ -22,7 +23,7 @@ export const useNotesStore = defineStore('note', () => {
     if (index !== -1)
       notes.value.splice(index, 1);
   }
-  return { notes, noteTitles, addNote, deleteNote };
+  return { notes, noteTitles, addNote, deleteNote, validationError };
 }, {
   persist: true,
 });
