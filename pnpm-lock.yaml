@@ -13,9 +13,12 @@ devDependencies:
   '@antfu/eslint-config':
     specifier: ^2.6.2
     version: 2.6.2(@unocss/eslint-plugin@0.58.3)(@vue/compiler-sfc@3.4.6)(eslint-plugin-format@0.1.0)(eslint@8.56.0)(typescript@5.3.3)
-  '@iconify/json':
-    specifier: ^2.2.166
-    version: 2.2.166
+  '@iconify-json/lets-icons':
+    specifier: ^1.1.2
+    version: 1.1.2
+  '@iconify-json/ph':
+    specifier: ^1.1.12
+    version: 1.1.12
   '@nuxt/devtools':
     specifier: ^1.0.6
     version: 1.0.6(nuxt@3.9.1)(vite@5.0.11)
@@ -809,11 +812,16 @@ packages:
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
     dev: true
 
-  /@iconify/json@2.2.166:
-    resolution: {integrity: sha512-Cq+t8xOBWU2Dt+bECLvGnF6yxj5hEEF5rmHiEvVR68flgcmG6/ph5xDr9+YWqT3Ita1WxDtj5lVWxoEe/c+U3A==}
+  /@iconify-json/lets-icons@1.1.2:
+    resolution: {integrity: sha512-rju+DR2T5Up0y5CoNK9mpr4LVbAQISJEAXW5yHQQqPa8jqRYTTkJSc502H3QX4w91PUte9tAYNyv3hg5xk9how==}
     dependencies:
       '@iconify/types': 2.0.0
-      pathe: 1.1.1
+    dev: true
+
+  /@iconify-json/ph@1.1.12:
+    resolution: {integrity: sha512-m+rXTW084YaQQHT+F8TxdkCoAh+i/5MWRoSuPmxCWPlxwMAaLT/QfyVsbEiV95HM5806U/jKpBV6F1b7Pmr3Vg==}
+    dependencies:
+      '@iconify/types': 2.0.0
     dev: true
 
   /@iconify/types@2.0.0:
