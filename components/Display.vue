@@ -1,10 +1,11 @@
 <script setup lang="ts">
-const props = defineProps({
-  date: String,
-  title: String,
-  content: String,
-  delete: Function,
-});
+const props = defineProps<{
+  date: string;
+  title: string;
+  content: string;
+  delete: Function;
+}>();
+
 const tooltipVisible = ref();
 
 function toggleTooltip() {
