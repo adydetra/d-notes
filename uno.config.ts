@@ -1,17 +1,11 @@
-import { defineConfig, presetAttributify, presetIcons, presetUno, presetWebFonts } from 'unocss';
 import transformerDirectives from '@unocss/transformer-directives';
+import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss';
 
 export default defineConfig({
   presets: [
     presetUno(),
     presetIcons(),
     presetAttributify(),
-    presetWebFonts({
-      provider: 'bunny',
-      fonts: {
-        mono: 'DM Mono',
-      },
-    }),
   ],
   shortcuts: {
     betweenCenter: 'flex justify-between items-center',

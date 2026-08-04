@@ -1,9 +1,10 @@
 <script setup lang="ts">
 const props = defineProps<{
+  id?: number;
   date: string;
   title: string;
   content: string;
-  delete: Function;
+  delete: (id: number | string) => void;
 }>();
 
 const tooltipVisible = ref();
@@ -25,7 +26,7 @@ function toggleTooltip() {
     <div betweenCenter>
       <span betweenCenter gap-1.5 text-xs><div i-ph:calendar-blank-duotone />{{ props.date }}</span>
       <div relative>
-        <button aria-label="Remove" cursor-pointer rounded-md border-none bg-transparent p-0 transition ease-in-out dark:text-black @click="props.delete?.(props.date)" @mouseenter="toggleTooltip" @mouseleave="toggleTooltip">
+        <button aria-label="Remove" cursor-pointer rounded-md border-none bg-transparent p-0 transition ease-in-out dark:text-black @click="props.delete?.(props.id || props.date)" @mouseenter="toggleTooltip" @mouseleave="toggleTooltip">
           <div i-lets-icons:trash-duotone text-2xl text-red-400 hover:text-red-600 />
         </button>
         <div v-show="tooltipVisible" class="-left-4 -top-7" absolute z-10 rounded bg-gray-700 px-2 py-1 text-xs text-white>

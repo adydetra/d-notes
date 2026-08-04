@@ -1,5 +1,8 @@
+import { defineStore } from 'pinia';
+import { computed, ref } from 'vue';
+
 export const useNotesStore = defineStore('note', () => {
-  const notes = ref([]);
+  const notes = ref<{ id?: number; date: string; title: string; content: string }[]>([]);
   const validationError = ref('');
   const noteTitles = computed (() => notes.value.map(note => note.title));
 
@@ -9,7 +12,7 @@ export const useNotesStore = defineStore('note', () => {
   }
 
   // Function to add a new note
-  function addNote(title, content) {
+  function addNote(title: string, content: string) {
     const currentDate = new Date();
     const format = currentDate.toLocaleDateString('en-US', {
       year: 'numeric',
@@ -17,6 +20,7 @@ export const useNotesStore = defineStore('note', () => {
       day: '2-digit',
     });
     notes.value.unshift({
+      id: Date.now(),
       date: format,
       title,
       content,
@@ -24,8 +28,8 @@ export const useNotesStore = defineStore('note', () => {
   }
 
   // Function to delete a note
-  function deleteNote(date) {
-    const index = notes.value.findIndex(note => note.date === date);
+  function deleteNote(identifier: number | string) {
+    const index = notes.value.findIndex(note => note.id === identifier || note.date === identifier);
     if (index !== -1)
       notes.value.splice(index, 1);
   }
@@ -36,5 +40,7 @@ export const useNotesStore = defineStore('note', () => {
 
   return { notes, noteTitles, addNote, deleteNote, validationError };
 }, {
-  persist: true,
+  persist: {
+    storage: piniaPluginPersistedstate.localStorage(),
+  },
 });

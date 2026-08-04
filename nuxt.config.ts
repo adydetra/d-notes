@@ -16,13 +16,8 @@ export default defineNuxtConfig({
       ],
     },
   },
-  
-  modules: [
-    '@nuxtjs/color-mode',
-    '@pinia/nuxt',
-    '@pinia-plugin-persistedstate/nuxt',
-    '@unocss/nuxt',
-  ],
+
+  modules: ['@nuxtjs/color-mode', '@pinia/nuxt', 'pinia-plugin-persistedstate', '@unocss/nuxt'],
 
   pinia: {
     storesDirs: ['./stores/**'],
@@ -30,5 +25,11 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
-  devtools: { enabled: false },
+  routeRules: {
+    '/': { prerender: true },
+  },
+  devtools: {
+    enabled: false,
+  },
+  compatibilityDate: '2026-08-04',
 });
